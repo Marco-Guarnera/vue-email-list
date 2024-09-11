@@ -14,6 +14,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Vue.js 3 -->
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Axios -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- File CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <!-- File JavaScript -->
@@ -23,7 +27,16 @@
 <body>
     <!-- Main -->
     <main>
-        <div id="app"></div>
+        <div id="app" class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Vue Email List</h1>
+                    <ul class="list-group list-group-numbered">
+                        <li class="list-group-item" v-for="email in emailsList" v-text="email"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 
