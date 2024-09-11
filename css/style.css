@@ -1,0 +1,46 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Generics */
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Utilities */
+
+/* Wrapper */
+.wrapper {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+/* Flexbox */
+
+.flex {
+    display: flex;
+}
+
+.flex.row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Layout */
