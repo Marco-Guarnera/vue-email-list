@@ -31,9 +31,14 @@
             <div class="row">
                 <div class="col">
                     <h1>Vue Email List</h1>
-                    <ul class="list-group list-group-numbered">
+                    <ul class="list-group list-group-numbered" v-if="loadingCompleted">
                         <li class="list-group-item" v-for="email in emailsList" v-text="email"></li>
                     </ul>
+                    <div class="text-center" v-else>
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

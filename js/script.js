@@ -6,7 +6,11 @@ const app = Vue.createApp({
         emailsList: [],
         apiUrl: "https://flynn.boolean.careers/exercises/api/random/mail"
     }),
-    computed: {},
+    computed: {
+        loadingCompleted() {
+            return this.emailsList.length === 10;
+        }
+    },
     methods: {
         getRandomEmails() {
             for (let i = 0; i < 10; i++) {
